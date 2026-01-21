@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.chess-square {
+  transition: all 0.2s;
+}
+
+.highlight-move::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.highlight-capture::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
